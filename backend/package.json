@@ -1,0 +1,46 @@
+{
+  "name": "TechPadie",
+  "version": "1.0.0",
+  "description": "The Backend Architecture for TechPadie",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": " nodemon ./src/server.js",
+    "dev": "nodemon ./src/server.js",
+    "prismaMigrate": "prisma migrate dev",
+    "prismaGenerate": "prisma generate dev",
+    "dbPush": "prisma db push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com//issues"
+  },
+  "homepage": "https://github.com/#readme",
+  "dependencies": {
+    "@prisma/client": "^5.8.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "joi": "^17.11.1",
+    "jsonwebtoken": "^9.0.2",
+    "logger": "^0.0.1",
+    "nodemon": "^3.0.2",
+    "body-parser": "^1.20.2",
+    "winston": "^3.8.2",
+    "nodemailer": "^6.9.5",
+    "otp-generator": "^4.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "prettier": "^3.0.3",
+    "prisma": "^5.8.0"
+  },
+  "prisma": {
+    "schema": "./prisma/schema.prisma"
+  }
+}
