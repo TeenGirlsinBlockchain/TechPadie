@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/"
+    "url": "git+https://github.com/TeenGirlsinBlockchain/TechPadie.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com//issues"
+    "url": "https://github.com/TeenGirlsinBlockchain/TechPadie.git/issues"
   },
-  "homepage": "https://github.com/#readme",
+  "homepage": "https://github.com/TeenGirlsinBlockchain/TechPadie.git#readme",
   "dependencies": {
     "@prisma/client": "^5.8.0",
     "bcryptjs": "^2.4.3",
