@@ -1,0 +1,51 @@
+{
+  "name": "TechPadie",
+  "version": "1.0.0",
+  "description": "The Backend Architecture for TechPadie",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": " nodemon ./src/server.js",
+    "dev": "nodemon ./src/server.js",
+    "prismaMigrate": "prisma migrate dev",
+    "prismaGenerate": "prisma generate dev",
+    "dbPush": "prisma db push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TeenGirlsinBlockchain/TechPadie.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TeenGirlsinBlockchain/TechPadie.git/issues"
+  },
+  "homepage": "https://github.com/TeenGirlsinBlockchain/TechPadie.git#readme",
+  "dependencies": {
+    "@prisma/client": "^5.8.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.4.0",
+    "express-validator": "^7.2.0",
+    "helmet": "^7.1.0",
+    "joi": "^17.11.1",
+    "jsonwebtoken": "^9.0.2",
+    "logger": "^0.0.1",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.9.5",
+    "nodemon": "^3.0.2",
+    "otp-generator": "^4.0.1",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "prettier": "^3.0.3",
+    "prisma": "^5.8.0"
+  },
+  "prisma": {
+    "schema": "./prisma/schema.prisma"
+  }
+}
