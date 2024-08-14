@@ -5,7 +5,7 @@ const server = app.listen(config.port, () => {
   console.log(`Server running on port ${config.port}`);
 });
 
-// Graceful shutdown
+// Graceful shutdownn
 const shutdown = () => {
   console.log('Shutting down server...');
   server.close(() => {
