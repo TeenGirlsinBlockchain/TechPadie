@@ -1,0 +1,47 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  schemas  = ["techpadie_schema"]
+}
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["multiSchema"]
+}
+
+model User {
+  id                Int      @id @default(autoincrement())
+  email             String   @unique
+  username          String   @unique
+  password          String?
+  name              String?
+  preferredLanguage String?
+  role              String   @default("user")
+  otp               String?  
+  otpExpiresAt      DateTime? 
+  web3Experience    String?  
+  interests         String[] 
+
+  @@schema("techpadie_schema")
+}
+
+model Course {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  content     String
+  language    String
+  quizzes     Quiz[]
+
+  @@schema("techpadie_schema")
+}
+
+model Quiz {
+  id       Int      @id @default(autoincrement())
+  question String
+  answer   String
+  course   Course   @relation(fields: [courseId], references: [id])
+  courseId Int
+
+  @@schema("techpadie_schema")
+}
