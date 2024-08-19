@@ -10,17 +10,19 @@ generator client {
 }
 
 model User {
-  id                Int      @id @default(autoincrement())
-  email             String   @unique
-  username          String   @unique
-  password          String?
-  name              String?
-  preferredLanguage String?
-  role              String   @default("user")
-  otp               String?  
-  otpExpiresAt      DateTime? 
-  web3Experience    String?  
-  interests         String[] 
+  id                 Int      @id @default(autoincrement())
+  email              String   @unique
+  password           String?
+  name               String?
+  preferredLanguage  String?
+  role               String   @default("user")
+  otp                String?  
+  otpExpiresAt       DateTime? 
+  techpadieReason    String?  
+  educationLevel     String?  
+  preferredSocialMedia String? 
+  applicationMode    String?  
+  web3Experience     String?  
 
   @@schema("techpadie_schema")
 }
