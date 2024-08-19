@@ -8,8 +8,11 @@ CREATE TABLE "techpadie_schema"."User" (
     "role" TEXT NOT NULL DEFAULT 'user',
     "otp" TEXT,
     "otpExpiresAt" TIMESTAMP(3),
+    "techpadieReason" TEXT,
+    "educationLevel" TEXT,
+    "preferredSocialMedia" TEXT,
+    "applicationMode" TEXT,
     "web3Experience" TEXT,
-    "interests" TEXT[],
 
     CONSTRAINT "User_pkey" PRIMARY KEY ("id")
 );
