@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 function FormGroup({ label, util, children }) {
     return (
       <div className="flex flex-col">
@@ -8,6 +9,12 @@ function FormGroup({ label, util, children }) {
       </div>
     );
   }
+
+  FormGroup.propTypes = {
+    label: PropTypes.string.isRequired,   
+    util: PropTypes.string.isRequired,     
+    children: PropTypes.node.isRequired,   
+  };
   
   export default FormGroup;
   
