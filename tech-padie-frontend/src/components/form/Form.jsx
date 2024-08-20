@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 // form component: takes in the type (as an header) and children to populate it's body
 
-import Button from '../Button';
+import Button from '..';
 
 function Form({ formName, children }) {
   return (
