@@ -128,4 +128,6 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
-redacted
+
+# Ignore node_modules directory
+node_modules/
