@@ -6,43 +6,28 @@ import FormFooter from '../components/form/FormFooter';
 
 function Login() {
   const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
 
   return (
       <div className=" bg-white p-24 sm:w-[90%] md:w-[70%] lg:w-[50%]">
-        <h1 className="mb-4 text-center text-4xl font-semibold text-black">
-          Sign In
+        <h1 className="mb-4 text-4xl font-semibold text-black">
+          Welcome Back
         </h1>
+        <h4 className="mb-4 text-4sm text-gray-500">
+        We’ve sent you a code to confirm your registration
+        </h4>
         <Form formName="Sign In">
-          <FormGroup label="Email" util="email">
+          <FormGroup util="email">
             <FormInput
               util="email"
               type="email"
               name="email"
               title="email"
-              placeholder="Please fill in your email"
-              inputStyles="w-full"
+              placeholder="Enter email address"
+              inputStyles="w-full placeholder:text-gray-500 bg-gray-100 rounded-lg"
+              labelStyles="p-8 rounded-lg"
               value={email}
               handleChange={setEmail}
             />
-          </FormGroup>
-          <FormGroup label="Password" util="password">
-            <FormInput
-              util="password"
-              type="password"
-              name="password"
-              title="password"
-              placeholder="Please fill in your password"
-              inputStyles="w-full"
-              value={password}
-              handleChange={setPassword}
-            />
-            <a
-              href="#"
-              className="mt-1 flex justify-end  text-lg  text-secondary_normal hover:underline"
-            >
-              Forgot Password?
-            </a>
           </FormGroup>
         </Form>
         <FormFooter

@@ -14,6 +14,8 @@ function Button({ type = "button", handleClick, addedStyles = "", children }) {
   );
 }
 
+//TODO: #10 REFACTOR CODEBASE HERE AND DELETE REDUNDANT COMPONENTS
+
 Button.propTypes = {
   type: PropTypes.string, 
   handleClick: PropTypes.func.isRequired, 
