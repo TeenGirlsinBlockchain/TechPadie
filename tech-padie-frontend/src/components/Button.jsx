@@ -7,7 +7,7 @@ function Button({ type = "button", handleClick, addedStyles = "", children }) {
       type={type}
       onClick={handleClick}
       className={`rounded-xl border 
-         px-2 py-1 ${addedStyles} `}
+         px-4 py-4 ${addedStyles} `}
     >
       {children}
     </button>

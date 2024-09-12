@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Login from './pages/Login';
+import Dashboard from './pages/Dashboard';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
               element={<p>Still working on HomePage comeback Later.</p>}
             />
 
-            <Route path="login" element={<Login />} />
+            <Route path="dashboard" element={<Dashboard />} />
             <Route path="*" element={<p>404 Not Found</p>} />
           </Route>
         </Routes>

@@ -9,7 +9,7 @@ function Form({ formName, children }) {
       {/* form children */}
       {children}
 
-      <Button type="submit" addedStyles="mt-5 w-full genBtn">
+      <Button type="submit" addedStyles="mt-5 w-full genBtn bg-blue-500 text-white">
         {formName}
       </Button>
     </form>

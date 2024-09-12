@@ -22,7 +22,7 @@ function FormInput({
         value={value}
         onChange={(e) => handleChange(e.target.value)}
         placeholder={placeholder}
-        className={`appearance-none border border-gray-300 bg-white px-5 py-1  text-black outline-none ${inputStyles}`}
+        className={`appearance-none bg-gray-200 px-8 py-4 text-black outline-none ${inputStyles}`}
         required={required}
       />
     );

@@ -97,6 +97,9 @@ body {
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 1.5;
+    
+  background-color: var(--color-ash-200);
+
 
     &::-webkit-scrollbar {
       width: .5rem;
