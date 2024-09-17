@@ -1,27 +1,31 @@
 // import { useState } from 'react';
-import FormFooter from '../components/form/FormFooter';
-import Tracker from '../ui/Tracker'
+// import FormFooter from '../components/form/FormFooter';
+// import Tracker from '../ui/Tracker'
+import Button from "../components/Button";
+import ButtonGroup from "../ui/ButtonGroup";
+// import ButtonText from "../ui/ButtonText";
 
 function InitialOnBoarding() {
-
   return (
-      <div className=" bg-white p-24 sm:w-[90%] md:w-[70%] lg:w-[50%]">
-        <Tracker height={3} >
-          <div className="flex flex-col gap-1">
-            <Tracker.Progress color="var(--color-red-700)" />
-            <Tracker.Bar color="var(--color-red-700)" />
-          </div>
-        </Tracker>
-        <h1 className="mb-4 text-center text-4xl font-semibold text-black">
-        Welcome onboard
+    <div className="bg-white p-24 sm:w-[90%] md:w-[70%] lg:w-[50%]">
+      <div className="flex flex-col items-start">
+        <h1 className="mb-4 text-4xl font-semibold text-black">
+          Welcome onboard
         </h1>
-       
-        <FormFooter
-          link="/signup"
-          question="Don't have an account?"
-          action="Sign Up"
-        />
+        <p className="text-md mb-4">
+          Let’s get to know you!
+        </p>
+
+        <p className="text-sm text-blue-400 mb-4">
+        What brings you to Techpadie ?
+        </p>
+        <ButtonGroup>
+        <Button>Learn</Button> 
+        <Button>Earn</Button>
+        <Button>Community</Button>
+      </ButtonGroup>
       </div>
+    </div>
   );
 }
 

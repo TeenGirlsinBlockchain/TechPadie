@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
-import OnBoarding from './pages/OnBoarding'
+import OnBoarding from './pages/InitialOnBoarding'
 
 function App() {
   return (
