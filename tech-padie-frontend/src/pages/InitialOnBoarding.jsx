@@ -19,13 +19,50 @@ function InitialOnBoarding() {
         <p className="text-sm text-blue-400 mb-4">
         What brings you to Techpadie ?
         </p>
-        <ButtonGroup>
+        <ButtonGroup className="mb-4">
         <Button>Learn</Button> 
         <Button>Earn</Button>
         <Button>Community</Button>
       </ButtonGroup>
+
+        <p className="text-sm text-blue-400 mb-4">
+        Highest level of education ?
+        </p>
+        <ButtonGroup className="mb-4">
+        <Button>Learn</Button> 
+        <Button>Earn</Button>
+        <Button>Community</Button>
+      </ButtonGroup>
+
+        <p className="text-sm text-blue-400 mb-4">
+        Preferred social media ?
+        </p>
+        <ButtonGroup className="mb-4">
+        <Button>Telegram</Button> 
+        <Button>Discord</Button>
+        <Button>Twitter X</Button>
+      </ButtonGroup>
+
+        <p className="text-sm text-blue-400 mb-4">
+        Which application mode do you prefer ?
+        </p>
+        <ButtonGroup className="mb-4">
+        <Button>Dark Mode</Button> 
+        <Button>Light Mode</Button>
+      </ButtonGroup>
+
+        <p className="text-sm text-blue-400 mb-4">
+        What’s your level of web3;0 experience ?
+        </p>
+        <ButtonGroup className="mb-8">
+        <Button>0-1 year</Button> 
+        <Button>2-4 years</Button>
+        <Button>5 years above</Button>
+      </ButtonGroup>
       </div>
+      <Button>Continue</Button> 
     </div>
+    
   );
 }
 
