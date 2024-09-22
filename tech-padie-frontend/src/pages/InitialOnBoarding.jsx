@@ -60,7 +60,7 @@ function InitialOnBoarding() {
         <Button>5 years above</Button>
       </ButtonGroup>
       </div>
-      <Button>Continue</Button> 
+      <Button addedStyles="w-full rounded-md bg-[#227FA1] text-white">Continue</Button> 
     </div>
     
   );
