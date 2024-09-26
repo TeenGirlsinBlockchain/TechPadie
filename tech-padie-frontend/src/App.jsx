@@ -1,7 +1,10 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Dashboard from './pages/Dashboard';
-import OnBoarding from './pages/InitialOnBoarding'
-import NextOnBoarding from './pages/NextOnBoarding'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Dashboard from "./pages/Dashboard";
+import OnBoarding from "./pages/InitialOnBoarding";
+import NextOnBoarding from "./pages/NextOnBoarding";
+import RegistrationForm from './features/authentication/Signup';
+import EmailVerification from './features/authentication/EmailVerification';
+import Login from './features/authentication/Login';
 
 function App() {
   return (
@@ -19,7 +22,9 @@ function App() {
             <Route path="*" element={<p>404 Not Found</p>} />
             <Route path="onboarding" element={<OnBoarding />} />
             <Route path="/next" element={<NextOnBoarding />} />
-
+            <Route path="/registration" element={<RegistrationForm />} />
+            <Route path="/email-verification" element={<EmailVerification />} />
+            <Route path="/login" element={<Login />} />
           </Route>
         </Routes>
       </BrowserRouter>
