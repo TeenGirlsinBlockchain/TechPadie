@@ -1,9 +1,11 @@
-import Button from "../components/Button";
+import ButtonIcon from "../ui/ButtonIcon";
 import Tracker from "../ui/Tracker";
 import ellipsebg from '../images/ellipsebg.png';
 import img1 from '../images/1.png'
 import img2 from '../images/2.png'
 import img3 from '../images/3.png'
+
+
 
 function NextOnBoarding() {
   return (
@@ -19,7 +21,7 @@ function NextOnBoarding() {
         <Tracker currtrack={50} height={4} bgcolor="#F1F1F1">
           <Tracker.Bar color="#227FA1" />
         </Tracker>
-        <div className="flex flex-col items-start space-y-4"> {/* Add space between items */}
+        <div className="flex flex-col items-start space-y-4">
           <h1 className="text-4xl font-semibold text-blue-400">
             More Knowledge
           </h1>
@@ -33,7 +35,7 @@ function NextOnBoarding() {
           <img src={img2} alt="Image 2" className="" />
           <img src={img3} alt="Image 3" className="" />
         </div>
-        <Button addedStyles="w-full rounded-md bg-[#227FA1] text-white mt-8">Continue</Button> {/* Add margin-top to button */}
+        <ButtonIcon>Continue</ButtonIcon> 
       </div>
     </div>
   );

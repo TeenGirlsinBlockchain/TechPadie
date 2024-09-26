@@ -21,7 +21,7 @@ function InitialOnBoarding() {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-[#F7F7F7]">
-      {/* Form container with white background, rounded edges, and padding */}
+      
       <div className="bg-white rounded-lg p-8 sm:w-[90%] md:w-[70%] lg:w-[50%]">
         <Tracker currtrack={50} height={4} bgcolor="#F1F1F1">
           <Tracker.Bar color="#227FA1" /> 
@@ -73,7 +73,6 @@ function InitialOnBoarding() {
           </ButtonGroup>
         </div>
 
-        {/* Continue Button */}
         <button
           className={`w-full rounded-md px-8 py-2 ${
             allFieldsCompleted
