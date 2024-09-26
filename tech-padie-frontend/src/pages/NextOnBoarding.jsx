@@ -1,35 +1,41 @@
 import Button from "../components/Button";
 import Tracker from "../ui/Tracker";
 import ellipsebg from '../images/ellipsebg.png';
+import img1 from '../images/1.png'
+import img2 from '../images/2.png'
+import img3 from '../images/3.png'
 
 function NextOnBoarding() {
   return (
-    <div className="bg-white p-24 sm:w-[90%] md:w-[70%] lg:w-[50%]"
-    style={{
-      backgroundImage: `url(${ellipsebg})`,
-      backgroundSize: 'cover', 
-      backgroundRepeat: 'no-repeat', 
-    }}
-    >
-      <Tracker currtrack={50} height={4} bgcolor="#F1F1F1">
-        <Tracker.Bar color="#227FA1" /> 
-      </Tracker>
-      <div className="flex flex-col items-start">
-        <h1 className="mb-4 text-4xl font-semibold text-blue-400">
-        More Knowledge
-        </h1>
-        <p className="text-xl font-semibold mb-4 text-black">
-        All in one place
-        </p>
-
-        <p className="text-sm text-black mb-4">
-        Enjoy super-fast transaction with our wallet based on the solana blockchain ecosystem.
-        </p>
-        
+    <div className="flex justify-center items-center min-h-screen bg-white">
+      <div
+        className="sm:w-[90%] md:w-[70%] lg:w-[50%] rounded-t-3xl p-24 px-28 py-20" 
+        style={{
+          backgroundImage: `url(${ellipsebg})`,
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <Tracker currtrack={50} height={4} bgcolor="#F1F1F1">
+          <Tracker.Bar color="#227FA1" />
+        </Tracker>
+        <div className="flex flex-col items-start space-y-4"> {/* Add space between items */}
+          <h1 className="text-4xl font-semibold text-blue-400">
+            More Knowledge
+          </h1>
+          <p className="text-xl font-semibold text-black">All in one place</p>
+          <p className="text-sm text-black">
+            Enjoy super-fast transaction with our wallet based on the Solana blockchain ecosystem.
+          </p>
+        </div>
+        <div className="flex flex-col items-center space-y-4 mt-8 mb-8">
+          <img src={img1} alt="Image 1" className="" /> 
+          <img src={img2} alt="Image 2" className="" />
+          <img src={img3} alt="Image 3" className="" />
+        </div>
+        <Button addedStyles="w-full rounded-md bg-[#227FA1] text-white mt-8">Continue</Button> {/* Add margin-top to button */}
       </div>
-      <Button addedStyles="w-full rounded-md bg-[#227FA1] text-white">Continue</Button> 
     </div>
-    
   );
 }
 
