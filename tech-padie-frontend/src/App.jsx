@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
 import OnBoarding from './pages/InitialOnBoarding'
+import NextOnBoarding from './pages/NextOnBoarding'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="*" element={<p>404 Not Found</p>} />
             <Route path="onboarding" element={<OnBoarding />} />
+            <Route path="/next" element={<NextOnBoarding />} />
 
           </Route>
         </Routes>
