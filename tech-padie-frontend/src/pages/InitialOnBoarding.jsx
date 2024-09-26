@@ -1,13 +1,16 @@
 // import { useState } from 'react';
 // import FormFooter from '../components/form/FormFooter';
-// import Tracker from '../ui/Tracker'
 import Button from "../components/Button";
 import ButtonGroup from "../ui/ButtonGroup";
-// import ButtonText from "../ui/ButtonText";
+import Tracker from "../ui/Tracker";
+
 
 function InitialOnBoarding() {
   return (
     <div className="bg-white p-24 sm:w-[90%] md:w-[70%] lg:w-[50%]">
+      <Tracker currtrack={50} height={4} bgcolor="#F1F1F1">
+        <Tracker.Bar color="#227FA1" /> {/* Customize the bar color */}
+      </Tracker>
       <div className="flex flex-col items-start">
         <h1 className="mb-4 text-4xl font-semibold text-black">
           Welcome onboard
