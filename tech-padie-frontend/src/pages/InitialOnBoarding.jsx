@@ -1,136 +1,83 @@
 import { useState } from 'react';
-// import FormFooter from '../components/form/FormFooter';
 import Button from "../components/Button";
 import ButtonGroup from "../ui/ButtonGroup";
 import Tracker from "../ui/Tracker";
 
-
-
 function InitialOnBoarding() {
-  // Separate state for each question
-  const [selectedOption1, setSelectedOption1] = useState(null);
-  const [selectedOption2, setSelectedOption2] = useState(null);
-  const [selectedOption3, setSelectedOption3] = useState(null);
-  const [selectedOption4, setSelectedOption4] = useState(null);
-  const [selectedOption5, setSelectedOption5] = useState(null);
+ 
+  const [selectedPurpose, setSelectedPurpose] = useState(""); 
+  const [selectedEducation, setSelectedEducation] = useState(""); 
+  const [selectedSocial, setSelectedSocial] = useState(""); 
+  const [selectedMode, setSelectedMode] = useState(""); 
+  const [selectedExperience, setSelectedExperience] = useState("");
+
+  
+  const allFieldsCompleted = selectedPurpose && selectedEducation && selectedSocial && selectedMode && selectedExperience;
 
   return (
     <div className="bg-white p-24 sm:w-[90%] md:w-[70%] lg:w-[50%]">
       <Tracker currtrack={50} height={4} bgcolor="#F1F1F1">
-        <Tracker.Bar color="#227FA1" /> {/* Customize the bar color */}
+        <Tracker.Bar color="#227FA1" /> 
       </Tracker>
+
       <div className="flex flex-col items-start">
         <h1 className="mb-4 text-4xl font-semibold text-black">
-          Welcome onboard
+          Welcome Onboard !
         </h1>
         <p className="text-md mb-4">Let’s get to know you!</p>
 
-        <p className="text-sm text-blue-400 mb-4">What brings you to Techpadie?</p>
+        {/* First Group: What brings you to Techpadie? */}
+        <p className="text-sm text-blue-400 mb-4">What brings you to Techpadie ?</p>
         <ButtonGroup className="mb-4">
-          <Button
-            addedStyles={selectedOption1 === 'Learn' ? 'bg-[#227FA1] text-white' : ''}
-            handleClick={() => setSelectedOption1('Learn')}
-          >
-            Learn
-          </Button>
-          <Button
-            addedStyles={selectedOption1 === 'Earn' ? 'bg-[#227FA1] text-white' : ''}
-            handleClick={() => setSelectedOption1('Earn')}
-          >
-            Earn
-          </Button>
-          <Button
-            addedStyles={selectedOption1 === 'Community' ? 'bg-[#227FA1] text-white' : ''}
-            handleClick={() => setSelectedOption1('Community')}
-          >
-            Community
-          </Button>
+          <Button isActive={selectedPurpose === "Learn"} handleClick={() => setSelectedPurpose("Learn")}>Learn</Button>
+          <Button isActive={selectedPurpose === "Earn"} handleClick={() => setSelectedPurpose("Earn")}>Earn</Button>
+          <Button isActive={selectedPurpose === "Community"} handleClick={() => setSelectedPurpose("Community")}>Community</Button>
         </ButtonGroup>
 
-        <p className="text-sm text-blue-400 mb-4">Highest level of education?</p>
+        {/* Second Group: Highest level of education */}
+        <p className="text-sm text-blue-400 mb-4">Highest level of education ?</p>
         <ButtonGroup className="mb-4">
-          <Button
-            addedStyles={selectedOption2 === 'High School' ? 'bg-[#227FA1] text-white' : ''}
-            handleClick={() => setSelectedOption2('High School')}
-          >
-            High School
-          </Button>
-          <Button
-            addedStyles={selectedOption2 === 'Bachelor\'s' ? 'bg-[#227FA1] text-white' : ''}
-            handleClick={() => setSelectedOption2('Bachelor\'s')}
-          >
-            Bachelors
-          </Button>
-          <Button
-            addedStyles={selectedOption2 === 'Master\'s' ? 'bg-[#227FA1] text-white' : ''}
-            handleClick={() => setSelectedOption2('Master\'s')}
-          >
-            Masters
-          </Button>
+          <Button isActive={selectedEducation === "High School"} handleClick={() => setSelectedEducation("High School")}>High School</Button>
+          <Button isActive={selectedEducation === "Bachelor's"} handleClick={() => setSelectedEducation("Bachelor's")}>Bachelors</Button>
+          <Button isActive={selectedEducation === "Master's"} handleClick={() => setSelectedEducation("Master's")}>Masters</Button>
         </ButtonGroup>
 
-        <p className="text-sm text-blue-400 mb-4">Preferred social media?</p>
+        {/* Third Group: Preferred social media */}
+        <p className="text-sm text-blue-400 mb-4">Preferred social media ?</p>
         <ButtonGroup className="mb-4">
-          <Button
-            addedStyles={selectedOption3 === 'Telegram' ? 'bg-[#227FA1] text-white' : ''}
-            handleClick={() => setSelectedOption3('Telegram')}
-          >
-            Telegram
-          </Button>
-          <Button
-            addedStyles={selectedOption3 === 'Discord' ? 'bg-[#227FA1] text-white' : ''}
-            handleClick={() => setSelectedOption3('Discord')}
-          >
-            Discord
-          </Button>
-          <Button
-            addedStyles={selectedOption3 === 'Twitter X' ? 'bg-[#227FA1] text-white' : ''}
-            handleClick={() => setSelectedOption3('Twitter X')}
-          >
-            Twitter X
-          </Button>
+          <Button isActive={selectedSocial === "Telegram"} handleClick={() => setSelectedSocial("Telegram")}>Telegram</Button>
+          <Button isActive={selectedSocial === "Discord"} handleClick={() => setSelectedSocial("Discord")}>Discord</Button>
+          <Button isActive={selectedSocial === "Twitter X"} handleClick={() => setSelectedSocial("Twitter X")}>Twitter X</Button>
         </ButtonGroup>
 
-        <p className="text-sm text-blue-400 mb-4">Which application mode do you prefer?</p>
+        {/* Fourth Group: Application mode */}
+        <p className="text-sm text-blue-400 mb-4">Which application mode do you prefer ?</p>
         <ButtonGroup className="mb-4">
-          <Button
-            addedStyles={selectedOption4 === 'Dark Mode' ? 'bg-[#227FA1] text-white' : ''}
-            handleClick={() => setSelectedOption4('Dark Mode')}
-          >
-            Dark Mode
-          </Button>
-          <Button
-            addedStyles={selectedOption4 === 'Light Mode' ? 'bg-[#227FA1] text-white' : ''}
-            handleClick={() => setSelectedOption4('Light Mode')}
-          >
-            Light Mode
-          </Button>
+          <Button isActive={selectedMode === "Dark Mode"} handleClick={() => setSelectedMode("Dark Mode")}>Dark Mode</Button>
+          <Button isActive={selectedMode === "Light Mode"} handleClick={() => setSelectedMode("Light Mode")}>Light Mode</Button>
         </ButtonGroup>
 
-        <p className="text-sm text-blue-400 mb-4">What’s your level of web3 experience?</p>
+        {/* Fifth Group: Web3 experience */}
+        <p className="text-sm text-blue-400 mb-4">What’s your level of web3.0 experience ?</p>
         <ButtonGroup className="mb-8">
-          <Button
-            addedStyles={selectedOption5 === '0-1 year' ? 'bg-[#227FA1] text-white' : ''}
-            handleClick={() => setSelectedOption5('0-1 year')}
-          >
-            0-1 year
-          </Button>
-          <Button
-            addedStyles={selectedOption5 === '2-4 years' ? 'bg-[#227FA1] text-white' : ''}
-            handleClick={() => setSelectedOption5('2-4 years')}
-          >
-            2-4 years
-          </Button>
-          <Button
-            addedStyles={selectedOption5 === '5 years above' ? 'bg-[#227FA1] text-white' : ''}
-            handleClick={() => setSelectedOption5('5 years above')}
-          >
-            5 years above
-          </Button>
+          <Button isActive={selectedExperience === "0-1 year"} handleClick={() => setSelectedExperience("0-1 year")}>0-1 year</Button>
+          <Button isActive={selectedExperience === "2-4 years"} handleClick={() => setSelectedExperience("2-4 years")}>2-4 years</Button>
+          <Button isActive={selectedExperience === "5 years above"} handleClick={() => setSelectedExperience("5 years above")}>5 years above</Button>
         </ButtonGroup>
       </div>
-      <Button addedStyles="w-full rounded-md bg-[#227FA1] text-white">Continue</Button>
+
+      {/* Continue Button */}
+      <button
+        className={`w-full rounded-md px-8 py-2 ${
+          allFieldsCompleted
+            ? "bg-[#227FA1] text-white"  
+            : "bg-gray-300 text-gray-600 cursor-not-allowed" 
+        }`}
+        disabled={!allFieldsCompleted}>
+        Continue
+      </button>
     </div>
   );
 }
+
 export default InitialOnBoarding;

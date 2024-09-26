@@ -1,13 +1,14 @@
 import PropTypes from "prop-types";
 // Button component: For usage throughout the entire app, dynamic reusable component
 
-function Button({ type = "button", handleClick, addedStyles = "", children }) {
+function Button({ type = "button", handleClick, addedStyles = "", children, isActive }) {
   return (
     <button
       type={type}
       onClick={handleClick}
-      className={`rounded-full border 
-         px-8 py-2 bg-[#F1F1F1] active:bg-[#227FA1] active:text-white focus:bg-[#227FA1] focus:text-white ${addedStyles} `}
+      className={`rounded-full border px-8 py-2 ${
+        isActive ? "bg-[#227FA1] text-white" : "bg-[#F1F1F1]"
+      } ${addedStyles}`}
     >
       {children}
     </button>
@@ -21,6 +22,7 @@ Button.propTypes = {
   handleClick: PropTypes.func.isRequired, 
   addedStyles: PropTypes.string, 
   children: PropTypes.node.isRequired, 
+  isActive: PropTypes.bool,
 };
 
 export default Button;
